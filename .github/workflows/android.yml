@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x build.gradle
+    - name: Grant execute permission for gradle
+      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./build.gradle
+      run: ./gradlew build
